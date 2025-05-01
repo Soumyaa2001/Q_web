@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Dropdown</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #2980b9;
+            padding: 10px 20px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            position: relative;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #21618c;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 40px;
+            border: 1px solid black;
+            background-color: #6dbcf1;
+            min-width: 150px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .navbar li:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+
+            <li>
+                <a href="#">Services ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Web Design</a>
+                    <a href="#">App Development</a>
+                    <a href="#">SEO</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="#">Products ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Software</a>
+                    <a href="#">Mobile Apps</a>
+                    <a href="#">AI Tools</a>
+                </div>
+            </li>
+
+            <li>
+                <a href="#">Contact Us ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Email</a>
+                    <a href="#">Phone</a>
+                    <a href="#">Location</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+</html>

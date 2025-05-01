@@ -1,0 +1,36 @@
+button:hover{
+    background-color: aqua;
+}
+
+p:first-child{
+    color: aqua;
+}
+
+p:last-child{
+    color: blue;
+}
+ /* p:nth-child(even){
+    color: red;
+ }
+
+ p:nth-child(odd){
+    color: green;
+ } */
+
+ p:first-of-type{
+    color: chartreuse;
+ }
+
+ /* p:only-child{
+    color: blue;
+ } */
+
+ p:nth-last-child(4){
+ color: cadetblue;
+ }
+ p:nth-of-type(3){
+    color: chocolate
+    
+    
+    ;
+ }

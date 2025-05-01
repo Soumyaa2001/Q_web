@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style2.css">
+    <style>p[class~="para"]
+        {
+            color: blue;
+        }
+        p[class ^="top"]
+        {
+            color: brown;
+        }
+        p[class $="top"]
+        {
+          color: chartreuse;
+        }
+        p[class *="te"]
+        {
+          color: rgb(184, 17, 123);
+        }
+        #para{
+           color: darkviolet; 
+        }
+        p[type]
+        {
+           color: magenta;
+        }
+        </style>
+</head>
+<body>
+   <p  class="first-para" id="para">Lorem ipsum dolor sit amet. </p>
+   <p type="para">Lorem ipsum dolor sit amet.</p>
+  <p class="top-para">Lorem ipsum dolor sit amet.</p>
+  <p class="top-para1">Lorem ipsum dolor sit amet.</p>
+  <p class="para top">Lorem ipsum dolor sit amet.</p>
+  <p class="para1 top">Lorem ipsum dolor sit amet.</p>
+  <p class="context">Lorem ipsum dolor sit amet.</p>
+  <p class="contest">Lorem ipsum dolor sit amet.</p>
+</body>
+</html>
