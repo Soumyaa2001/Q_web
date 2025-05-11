@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Login Page</title>
 
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #2980b9, #6dd5fa);
+            background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
             font-family: Arial, sans-serif;
         }
 
@@ -62,20 +62,30 @@
         input[type="submit"]:hover {
             background-color: #21618c;
         }
+        
+        .footer {
+             text-align: center;
+             margin-top: 20px;
+            }
 
-        p {
-            text-align: center;
-            margin-top: 15px;
-        }
+            .footer p {
+            margin: 10px 0;
+            }
 
-        a {
-            color: #2980b9;
-            text-decoration: none;
+            .footer a {
+                color: #2980b9;
+                text-decoration: none;
+                font-weight: bold;
+            }
 
-        }
+            .footer a:hover {
+                color: #21618c;
+                text-decoration: underline;
+            }
         .checkbox{
             display: flex;
-        }
+            gap: 10px;
+            }
 
         a:hover {
             text-decoration: underline;
@@ -96,11 +106,13 @@
 
             <div class="checkbox"> <input type="checkbox" id="remember" name="remember">
             <label for="remember"> Remember Me</label> </div>
-
+            
             <input type="submit" value="Login">
-
-            <p>Don't have an account? <a href="sign-up.html">Sign Up</a></p>
-            <p><a href="#">Forgot Password?</a></p>
+            
+            <div class="footer">
+                <p>Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+                <p><a href="#">Forgot Password?</a></p>
+            </div>
 
         </form>
     </div>
