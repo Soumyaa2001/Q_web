@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- promise(then &catch) -->
+    <!-- <script>
+    let promise=new Promise((resolve,reject)=>{
+        if(3>5){
+            resolve("success full")
+        }
+        else{
+            reject("fail")
+        }
+
+    })
+    .then((msg)=>{
+        console.log(msg);
+        
+    })
+    .catch((msg)=>{
+        console.log(msg);
+        
+    })
+    </script> -->
+
+    <!-- <script>
+        //console.log(window);
+    //fetch data using then and catch
+        let data=window.fetch("https://api.github.com/users")
+        .then((x)=>{return x.json()})
+        .then((y)=>{console.log(y);
+            y.map((item)=>{
+                let div=document.createElement("div")
+                let login=document.createElement("h1")
+                let id=document.createElement("h1")
+                let img=document.createElement("img")
+                login.innerText=item.login;
+                id.innerText=item.id;
+                img.src=item.avatar_url;
+
+                img.style.height="200px"
+                img.style.width="200px"
+
+                document.body.append(div)
+                div.append(login,id,img)
+
+            })
+        })
+        .catch((err)=>{console.log(err);
+        })
+        
+    </script> -->
+
+    <script>
+        console.log("start");
+        
+        async function a() {
+            let data=await fetch("https://api.github.com/users")
+            console.log(data);
+            let finaldata=await data.json();
+            console.log(finaldata);
+            finaldata.map((x)=>{
+                
+                let div=document.createElement("div")
+                let login=document.createElement("h1")
+                let id=document.createElement("h1")
+                let img=document.createElement("img")
+                login.innerText=x.login;
+                id.innerText=x.id;
+                img.src=x.avatar_url;
+
+
+                document.body.append(div)
+                div.append(login,id,img)
+            })
+        }
+        a()
+        console.log("and");
+        
+    </script>
+</body>
+</html>

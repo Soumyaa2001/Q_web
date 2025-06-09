@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // boolean data type
+        let a=10;
+        let b=20;
+        console.log(a==b);
+
+        let a1=10;
+        let b1=a1;
+        console.log(a1==b1);
+
+        // null and undefined
+
+        let a3=null;
+        console.log(typeof a3);
+
+        let b3;
+        console.log(typeof b3);
+
+        //bigint
+
+        let a4=10;
+        console.log(typeof a4);
+
+        a4=10n;
+        console.log(typeof a4);
+
+        a4=BigInt(123456);
+        console.log(typeof a4);
+
+        a4=BigInt("123456");
+        console.log(typeof a4);
+
+        //symbol
+
+        let a5=10;
+        let b5="10";
+        console.log(a5==b5);
+
+
+        let a6=Symbol("10");
+        let b6=Symbol("10");
+        console.log(a6==b6);
+
+
+        let a7=Symbol("10");
+        let b7=a7;
+        console.log(a7==b7);
+        console.log(typeof a7);
+        
+
+        let a8=10;
+        let b8="10";
+        console.log(a8 ==b8);
+        console.log(a8===b8);
+
+//why js is a dynamic language
+        let a9=10;
+        console.log(a,typeof a9);
+        a9="hii";
+        console.log(a9, typeof a9);
+        a9=[10,20,30,40];
+        console.log(a9,typeof a9);
+        a9=function(){
+            console.log("i am function");
+            
+        }
+        a9()
+        
+              
+        
+        
+    
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

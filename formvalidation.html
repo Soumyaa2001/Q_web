@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.a{
+        color:red;
+    }</style>
+</head>
+<body>
+    <form action="">
+    <fieldset style="width: 50%; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+        <legend>form validation</legend>
+        <div>
+            <label for="fname">fname</label>
+            <input type="text" name="fname" id="fname"><br>
+            <span id="fnameError" class="a"></span>
+        </div>
+        <div>
+            <label for="uname">username</label>
+            <input type="text" name="uname" id="uname"><br>
+            <span id="unameError" class="a"></span>
+        </div>
+        <div>
+            <label for="password">password</label>
+            <input type="password" name="password" id="password"><br>
+            <span id="passwordError" class="a"></span>
+        </div>
+         <div>
+            <label for="cpassword">Confirm password</label>
+            <input type="password" name="cpassword" id="cpassword"><br>
+            <span id="cpassError" class="a"></span>
+        </div>
+        <div>
+            <button type="submit" id="btn">submit</button>
+        </div>  
+    </fieldset>
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        const fname = document.getElementById('fname');
+        const uname = document.getElementById('uname');
+        const password = document.getElementById('password');
+        const cpassword = document.getElementById('cpassword');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let valid = true;
+            document.getElementById('fnameError').textContent = '';
+            document.getElementById('unameError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+            document.getElementById('cpassError').textContent = ''
+            if (fname.value.trim() === '') {
+                document.getElementById('fnameError').textContent = 'First name is required';
+                valid = false;
+            }
+            if (uname.value.trim() === '') {
+                document.getElementById('unameError').textContent = 'Username is required';
+                valid = false;
+            }
+            if (password.value.trim() === '') {
+                document.getElementById('passwordError').textContent = 'Password is required';
+                valid = false;
+            } else if (password.value.length < 6) {
+                document.getElementById('passwordError').textContent = 'Password must be at least 6 characters long';
+                valid = false;
+            }
+            if (cpassword.value !== password.value) {
+                document.getElementById('cpassError').textContent = 'Passwords do not match';
+                valid = false;
+            }
+
+            if (valid) {
+                alert("Form submitted successfully!");
+                form.reset();
+            }
+        });
+    </script>
+    
+</body>
+</htm

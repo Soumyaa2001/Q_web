@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <SCript>
+        let a = {
+            id: 100,
+            name: "ram"
+        }
+        //freeze
+        // Object.freeze(a);
+        // console.log(Object.isFrozen(a));
+        // console.log(a);
+
+        // a.age=12;
+        // console.log(a);
+        // console.log(a.name);
+
+        // //seal
+        // Object.seal(a);
+        // console.log(Object.isSealed(a));
+        // console.log(a);
+        // a.age=12;
+        console.log(a);
+        delete (a.name);
+        console.log(a);
+        console.log(a.name);
+        a.name = "ramesh";
+        console.log(a);
+
+        //Object.keys()
+        console.log(Object.keys(a));
+
+        //Object.values()
+        console.log(Object.values(a));
+
+        //Object.entries()
+        console.log(Object.entries(a));
+
+
+        //Object.assign()
+
+        let b = {
+            id: 200,
+            name: "suresh"
+        }
+
+        let c = Object.assign(a, b)
+        console.log(c);
+        console.log(a);
+
+        //Object.groupBy()
+
+        let fruits = [
+            {
+                name: "banana", quantity: 300
+            },
+            { name: "orange", quantity: 200 },
+            { name: "mango", quantity: 150 }
+        ]
+        function callback({ quantity }) {
+            return quantity > 180 ? "ok" : "low"
+
+        }
+
+        let d = Object.groupBy(fruits, callback)
+        console.log(d);
+
+        //
+
+        let arr = [10, "hello", true, undefined, null, 1n, () => { console.log("function"); }, { id: 200, name: "piyush" }]
+        arr[6]()
+        console.log(arr[7].id, arr[7].name);
+        //store function in array
+        let brr = [() => { console.log("hii"); }, () => { console.log("hii") }, () => { console.log("hiii") }, () => { console.log("hiii") }]
+        brr.map((x) => { x() })
+        //store object inside array
+        let crr = [{ id: 200, name: "piyush" }, { id: 200, name: "piyush" }, { id: 200, name: "piyush" }, { id: 200, name: "piyush" }]
+        crr.map((x) => {
+            console.log(x.id, x.name);
+        })
+
+
+        //array inside  another array
+        let drr = [[1, 2, 3], [10, 20, 30], [100, 200, 300]]
+        drr.map((x) => {
+            x.map((y) => {
+                console.log(y);
+
+            })
+        })
+        //store function inside  object
+        let obj = {
+            id: 100, skills: ["java", "web", "sql"],
+            data: function add() {
+                //console.log("function inside the object");
+                console.log(this.id);
+
+
+            }, data1: () => {
+                console.log(this.id);
+            }
+        }
+        obj.skills.map((x) => {
+            console.log(x);
+        })
+        obj.data()
+        obj.data1()
+        //nested object
+        let obj1 = {
+            backend: {
+                frontend: {
+                    skill: "javascript"
+                }
+            }
+        }
+console.log(obj1.backend.frontend.skill);
+let {skill}=obj1.backend.frontend;
+console.log(skill);
+
+//primitive data type are immutable and object-dereferencing
+//non-primitive data types are mutable and object-referencing
+
+let a1=10;
+let b1=a1;
+console.log(a1);
+console.log(b1);
+b1=50;
+console.log(a1);
+console.log(b1);
+
+let x={
+    id:100,
+    name:"piyush"
+}
+let y=x;
+console.log(x);
+console.log(y);
+x.name="ram";
+x.id=200;
+console.log(x);
+console.log(y);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </SCript>
+
+</body>
+
+</html>

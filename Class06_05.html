@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str="hello";
+        console.log(typeof str);
+        let str1=`hii`;
+        console.log(typeof str1);
+        let str2='bye';
+        console.log(typeof str2);
+        //string interpolation
+        let a=10;
+        let b=20;
+        console.log("the addition of $a+$b is ${a+b}");//it will display as string
+        console.log(`the add of ${a} + ${b} is ${a+b} `)//it will do the operation with display the string
+
+        //inbuild method
+        //.length
+        let x="Qspider"
+        console.log(x.length);
+
+        //toUpperCase()
+
+        console.log(x.toUpperCase());
+
+        //toLowerCase()
+        let x1="ABSJSS";
+        console.log(x1.toLowerCase());
+
+        //CharAt(index)
+        let x2="asdfghjkl";
+        let count=0;
+        for(let i=0;i<x2.length;i++){
+            let ch=x2.charAt(i);
+            if(ch!='a'&& ch=='e'&& ch!='i'&& ch!='o'&& ch!='u'){
+                count++
+            }
+            
+        }    
+        console.log(count)    
+       
+        for(let i=0;i<x2.length;i++){
+            let ch=x2.charAt(i);
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+                count++
+
+            }
+        } console.log(count)
+
+        let str3="level";
+        let rev1=""
+        for(let i=str3.length-1;i>=0;i--){
+            rev1=rev1+str3.charAt(i);
+            
+        }
+        if(str3==rev1){
+            console.log("its a palindrom")
+        }
+        else{
+            console.log("its not");
+            
+        }
+        
+        
+        
+
+        
+        
+        
+                
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

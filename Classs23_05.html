@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //by using object
+        let obj = new Object();
+        console.log(obj);
+        obj.id = 100;
+        obj.name = "hello";
+        obj.age = 21;
+        console.log(obj);
+
+        //by using literal
+        let a = {
+            id: 200,
+            name: "hello",
+            age: 25,
+        }
+        console.log(a);
+
+        //by using constructor function
+        function add(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        let b = new add("hello", 20)
+        console.log(b);
+
+
+        //by use class constructor
+
+        class sample {
+            constructor(cource, fee) {
+                this.cource = cource;
+                this.fee = fee;
+            }
+        }
+        let x = new sample("js", 100)
+        console.log(x);
+
+        //CRUD OPERATION
+        let obj1 = {
+            id: 100,
+            name: "dash fellow"
+        }
+
+        //CREATE/INSERT 
+        //SYNTAX
+        //obj_name.property=value
+        obj1.age = 21
+        console.log(obj1);
+
+        //Read/Retrieve
+        //SYNTAX
+        //console.log(obj_name.property)
+        console.log(obj1.name);
+
+        //UPDATE/MODIFY
+        //SYNTAX
+        //obj_name.property=value;
+        obj1.name = "cfellow"
+        console.log(obj1);
+
+        //DELETE
+        //SYNTAX
+        //delete(object_name.property)
+        delete (obj1.id)
+        console.log(obj1);
+
+
+        //OBJECT DESTRUCTURING
+        let obj2 = {
+            id: 100,
+            name: "fellow"
+        }
+        console.log("befor destructuring");
+
+        console.log(obj2.id)
+        console.log(obj2.name);
+
+
+        console.log("after destructuring");
+
+        let { id, name } = obj2;
+        console.log(id);
+        console.log(name);
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

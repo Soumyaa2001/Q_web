@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        console.log(window);
+        
+        window.localStorage.setItem("id",96);
+        window.localStorage.setItem("name","c fellow");
+        console.log(localStorage.getItem("id"));
+        console.log(localStorage.getItem("name"));
+        window.localStorage.setItem("name","dabba fellow");
+        console.log(localStorage.getItem("name"));
+
+
+        console.log(localStorage.length);
+        localStorage.removeItem("id");
+        //localStorage.clear();
+         window.sessionStorage.setItem("id",69);
+        window.sessionStorage.setItem("name","dash fellow");
+        console.log(sessionStorage.getItem("id"));
+        console.log(sessionStorage.getItem("name"));
+        console.log(sessionStorage.length);
+        sessionStorage.removeItem("id");
+        //sessionStorage.clear();
+    </script> 
+    </body>
+</html>
